@@ -33,7 +33,7 @@
         "format": "󰣇",
         "tooltip": true,
         "tooltip-format": "btw",
-        "on-click": "rofi -show drun"
+        "on-click": "wofi --show drun"
     },
     "custom/files": {
         "format": "󰉋",
