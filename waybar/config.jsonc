@@ -1,0 +1,81 @@
+/////////////
+// GENERAL //
+/////////////
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 30,
+  "spacing": 10,
+  "margin-left": 10,
+  "margin-right": 10,
+  "margin-top": 5,
+  "margin-bottom": 0,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "temperature",
+    "memory",
+    "cpu"
+  ],
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    "pulseaudio",
+    "network",
+    "clock"
+  ],
+/////////////
+// MODULES //
+/////////////
+  "hyprland/workspaces": {
+    "format": "{icon}",
+	  "format-icons": {
+		  "1": "",
+		  "2": "󰨞",
+		  "3": "",
+		  "4": "",
+		  "5": ""
+	  },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  "temperature": {
+    "interval": 5,
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+    "format": "TEM: {temperatureC}°C",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "RAM: {percentage}%",
+    "interval": 5
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "CPU: {usage}%"
+  },
+  "hyprland/language": {
+    "format": "LAN: {}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "format-uk": "UK"
+  },
+  "pulseaudio": {
+    "format": "VOL: {volume}%",
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "interval": 5,
+    "format-wifi": "NET: {signalStrength}%",
+    "format-disconnected": "Disconnected ⚠",
+    "tooltip": false
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%A %d | %R:%S}",
+    "tooltip": false
+  }
+}
