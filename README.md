@@ -1,2 +1,1 @@
-# hypr-conf
-My Hyprland configs
+# Hyprland Dotfiles
