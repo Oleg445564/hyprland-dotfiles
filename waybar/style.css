@@ -1,9 +1,10 @@
 * {
   font-size: 14px;
-  font-family: "JetbrainsMono Nerd Font" ;
+  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 window#waybar {
   background: transparent;
+  font-family: SpaceMono Nerd Font, feather;
 }
 #workspaces button {
   color: #a9b1d6;
@@ -17,20 +18,23 @@ window#waybar {
 }
 .modules-left {
   background: #1a1b26;
+  /* border: #7aa2f7 2px solid; */
   border-radius: 10px;
 }
 .modules-center {
   padding: 0 10px;
   background: #1a1b26;
+  /* border: #7aa2f7 2px solid; */
   border-radius: 10px;
 }
 .modules-right {
   padding: 0 10px;
   background: #1a1b26;
+  /* border: #7aa2f7 2px solid; */
   border-radius: 10px;
 }
 #temperature {
-  color: #7dcfff;
+  color: #7aa2f7;
 }
 #memory {
   color: #ff9e64;
