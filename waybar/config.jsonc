@@ -30,14 +30,6 @@
 // MODULES //
 /////////////
   "hyprland/workspaces": {
-    "format": "{icon}",
-	  "format-icons": {
-		  "1": "",
-		  "2": "󰨞",
-		  "3": "",
-		  "4": "",
-		  "5": ""
-	  },
     "persistent-workspaces": {
       "*": 5
     }
@@ -46,36 +38,52 @@
     "interval": 5,
     "thermal-zone": 2,
     "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "format": "TEM: {temperatureC}°C",
+    "format": " {temperatureC}°C",
     "tooltip": false
   },
   "memory": {
-    "format": "RAM: {percentage}%",
+    "format": "   {percentage}%",
     "interval": 5
   },
   "cpu": {
     "interval": 5,
-    "format": "CPU: {usage}%"
+    "format": "  {usage}%"
   },
   "hyprland/language": {
-    "format": "LAN: {}",
+    "format": "  {}",
     "format-en": "EN",
     "format-ru": "RU",
     "format-uk": "UK"
   },
   "pulseaudio": {
-    "format": "VOL: {volume}%",
+    "format": "{icon}   {volume}%",
+    "format-bluetooth": "{icon} {volume}%  {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
     "on-click": "pavucontrol"
   },
   "network": {
-    "interval": 5,
-    "format-wifi": "NET: {signalStrength}%",
-    "format-disconnected": "Disconnected ⚠",
-    "tooltip": false
+    "format-wifi": "   {signalStrength}%",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠"
   },
   "clock": {
     "interval": 1,
     "format": "{:%A %d | %R:%S}",
-    "tooltip": false
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
   }
 }
