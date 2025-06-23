@@ -3,65 +3,57 @@
 /////////////
 {
   "layer": "bottom",
-  "position": "top",
-  "height": 30,
+  "position": "left",
   "spacing": 10,
-  "margin-left": 10,
-  "margin-right": 10,
-  "margin-top": 5,
-  "margin-bottom": 0,
+  "margin-left": 5,
+  "margin-right": 0,
+  "margin-top": 10,
+  "margin-bottom": 10,
   "reload_style_on_change": true,
   "modules-left": [
+    "custom/menu",
     "hyprland/workspaces"
-  ],
-  "modules-center": [
-    "temperature",
-    "memory",
-    "cpu"
   ],
   "modules-right": [
     "tray",
     "hyprland/language",
     "pulseaudio",
     "network",
-    "clock"
+    "clock",
+    "custom/power"
   ],
 /////////////
 // MODULES //
 /////////////
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "*": 5
-    }
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
+    "tooltip": "btw"
   },
-  "temperature": {
-    "interval": 5,
-    "thermal-zone": 2,
-    "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-    "format": " {temperatureC}°C",
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+        "active": "",
+        "default": "",
+        "empty": ""
+        }
+  },
+  "tray": {
     "tooltip": false
   },
-  "memory": {
-    "format": "   {percentage}%",
-    "interval": 5
-  },
-  "cpu": {
-    "interval": 5,
-    "format": "  {usage}%"
-  },
   "hyprland/language": {
-    "format": "  {}",
+    "format": "{}",
     "format-en": "EN",
     "format-ru": "RU",
     "format-uk": "UK"
   },
   "pulseaudio": {
-    "format": "{icon}   {volume}%",
-    "format-bluetooth": "{icon} {volume}%  {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": " {volume}%",
-    "format-source-muted": "",
+    "format": "{icon} ",
+    "format-bluetooth": "{icon} ",
+    "format-bluetooth-muted": "{icon} ",
+    "format-muted": " ",
+    "format-source": " ",
+    "format-source-muted": " ",
     "format-icons": {
       "headphone": "",
       "hands-free": "",
@@ -71,19 +63,24 @@
       "car": "",
       "default": ["", "", ""]
     },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "tooltip": false
   },
   "network": {
-    "format-wifi": "   {signalStrength}%",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-wifi": " ",
+    "format-ethernet": " ",
+    "tooltip": false,
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠"
+    "format-disconnected": "⚠ "
   },
   "clock": {
     "interval": 1,
-    "format": "{:%A %d | %R:%S}",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format": "{:%H\n%M}",
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": false
   }
 }
