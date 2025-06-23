@@ -1,10 +1,17 @@
 * {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 window#waybar {
-  background: transparent;
+  background: #1a1b26;
+  border-radius: 10px;
   font-family: SpaceMono Nerd Font, feather;
+}
+#custom-menu {
+	font-size: 26px;
+	 padding-left: 1px;
+    padding-right: 5px;
+    color: #7aa2f7;
 }
 #workspaces button {
   color: #a9b1d6;
@@ -15,32 +22,6 @@ window#waybar {
 #workspaces button:hover {
   background: transparent;
   border: none;
-}
-.modules-left {
-  background: #1a1b26;
-  /* border: #7aa2f7 2px solid; */
-  border-radius: 10px;
-}
-.modules-center {
-  padding: 0 10px;
-  background: #1a1b26;
-  /* border: #7aa2f7 2px solid; */
-  border-radius: 10px;
-}
-.modules-right {
-  padding: 0 10px;
-  background: #1a1b26;
-  /* border: #7aa2f7 2px solid; */
-  border-radius: 10px;
-}
-#temperature {
-  color: #7aa2f7;
-}
-#memory {
-  color: #ff9e64;
-}
-#cpu {
-  color: #9ece6a;
 }
 #language {
   color: #ff9e64;
@@ -54,4 +35,9 @@ window#waybar {
 }
 #clock {
   color: #a9b1d6;
+}
+#custom-power {
+	font-size: 30px;
+	transition: none;
+    color: #f7768e;
 }
