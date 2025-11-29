@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "drun,run";
     lines: 5;
     font: "FiraCode Nerd Font 14";
     show-icons: true;
@@ -11,12 +11,10 @@ configuration{
     hide-scrollbar: true;
     display-drun: "   Apps ";
     display-run: "   Run ";
-    display-window: "   window";
-    display-Network: " 󰤨  Network";
     sidebar-mode: true;
 }
 
-@theme "tokyonight"
+@theme "catppuccin-mocha-blue"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -25,8 +23,9 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 360px;
-
+    border: 2px;
     border-radius: 10px;
+    border-color: @border-col;
     background-color: @bg-col;
 }
 
@@ -66,7 +65,7 @@ listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
-    columns: 1;
+    columns: 2;
     background-color: @bg-col;
 }
 
