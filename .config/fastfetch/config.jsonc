@@ -1,25 +1,90 @@
 {
-    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-    "logo": {
-        "type": "small",
-        "padding": {
-            "top": 2
-        }
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/Pictures/Icons/hypr.png",
+    "type": "kitty",
+    "height": 17,
+  },
+  "display": {
+    "separator": " ➜ "
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "┌───────────── Operating system ─────────────┐",
+      "outputColor": "blue"
     },
-    "modules": [
-        "title",
-        "separator",
-        "os",
-        "kernel",
-        "shell",
-        "de",
-        "wm",
-        "icons",
-        "terminal",
-        "cpu",
-        "memory",
-        "disk",
-        "break",
-        "colors"
-    ]
+    {
+      "type": "OS",
+      "key": "󰣇 ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "Kernel",
+      "key": " ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "Uptime",
+      "key": " ",
+      "keyColor": "blue",
+    },
+    {
+      "type": "custom",
+      "format": "└────────────────────────────────────────────┘",
+      "outputColor": "blue"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┌─────────── Desktop environment ────────────┐",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "WM",
+      "key": " ",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "Terminal",
+      "key": " ",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "Shell",
+      "key": " ",
+      "keyColor": "cyan",
+    },
+    {
+      "type": "custom",
+      "format": "└────────────────────────────────────────────┘",
+      "outputColor": "cyan"
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "┌───────────────── Hardware ─────────────────┐",
+      "outputColor": "green"
+    },
+    {
+      "type": "CPU",
+      "key": " ",
+      "keyColor": "green",
+    },
+    {
+      "type": "Memory",
+      "key": " ",
+      "keyColor": "green",
+    },
+    {
+      "type": "Disk",
+      "key": "󰋊 ",
+      "keyColor": "green",
+    },
+    {
+      "type": "custom",
+      "format": "└────────────────────────────────────────────┘",
+      "outputColor": "green"
+    },
+  ]
 }
